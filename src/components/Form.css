@@ -36,7 +36,7 @@ form > input:focus {
 }
 
 .form-but {
-  margin: 0 !important;
+  margin: 0;
   height: 30px;
   color: white;
   border: #0290ff;

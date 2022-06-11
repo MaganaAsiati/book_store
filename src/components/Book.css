@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --font: 'Roboto+Slab', sans-serif;
+  --font: 'Montserrat', sans-serif;
 }
 
 .book {
   display: flex;
   justify-content: space-between;
   background-color: white;
-  padding-left: 15px;
-  padding-right: 75px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 75px 15px 15px;
   margin-bottom: 15px;
   font-family: var(--font);
   font-weight: 200;
@@ -36,7 +33,7 @@
   font-size: 0.7rem;
   font-style: normal;
   color: #45444491;
-  margin: 0 !important;
+  margin: 0;
 }
 
 .title {
@@ -75,7 +72,7 @@
 }
 
 .state-progress-info > h5 {
-  margin: 0 !important;
+  margin: 0;
   font-style: normal;
 }
 
