@@ -1,13 +1,13 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { deleteBook } from '../redux/books/books';
 
-export default function Book({ book }) {
+export default function Book(props) {
+  const book = props;
   const dispatch = useDispatch();
-  const remove = (id) => {
-    dispatch(removeBook(id));
+  const remove = () => {
+    dispatch(deleteBook(book.id));
   };
 
   return (
@@ -20,7 +20,3 @@ export default function Book({ book }) {
     </div>
   );
 }
-
-Book.propTypes = {
-  book: PropTypes.object.isRequired,
-};
