@@ -37,7 +37,7 @@ export default function Book(props) {
           <image alt={book.title} />
         </div>
         <div className="state-progress">
-          <div style={{ width: 50, height: 50 }}>
+          <div className="state-progress-calc">
             <CircularProgressbar value={Math.round((chapterVal / 20) * 100)} />
           </div>
           <div className="state-progress-info">

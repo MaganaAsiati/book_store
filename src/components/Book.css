@@ -21,7 +21,7 @@
   font-weight: 500;
   font-size: 0.7rem;
   font-style: normal;
-  margin: 0 !important;
+  margin: 0;
   color: #4386bf;
 }
 
@@ -126,4 +126,9 @@
   color: #4386bf;
   cursor: pointer;
   padding-bottom: 10px;
+}
+
+.state-progress-calc {
+  width: 50px;
+  height: 50px;
 }
