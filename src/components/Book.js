@@ -1,12 +1,62 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import { deleteBook } from '../redux/books/books';
+import './Book.css';
 
 export default function Book(props) {
   const book = props;
+  const dispatch = useDispatch();
+  const remove = () => {
+    dispatch(deleteBook(book.id));
+  };
+  const chapterVal = Math.round(Math.random() * 20);
+
   return (
     <div className="book">
-      <div className="book-title">{book.title}</div>
-      <div className="book-authors">{book.author}</div>
-      <button type="button">Remove</button>
+      <div className="ctn-left">
+        <div className="ctn-book-info">
+          <h5 className="category">{book.category}</h5>
+          <h2 className="title">{book.title}</h2>
+          <h5 className="author">{book.author}</h5>
+        </div>
+        <div className="ctn-book-action">
+          <h4>Comments</h4>
+          <span>|</span>
+          <button type="button" onClick={() => remove(book.id)}>
+            Remove
+          </button>
+          <span>|</span>
+          <h4>Edit</h4>
+        </div>
+      </div>
+
+      <div className="ctn-middle">
+        <div>
+          <image alt={book.title} />
+        </div>
+        <div className="state-progress">
+          <div className="state-progress-calc">
+            <CircularProgressbar value={Math.round((chapterVal / 20) * 100)} />
+          </div>
+          <div className="state-progress-info">
+            <h5 className="prog-numb">
+              {Math.round((chapterVal / 20) * 100)}
+              %
+            </h5>
+            <h5 className="comp">completed</h5>
+          </div>
+        </div>
+      </div>
+
+      <div className="ctn-right">
+        <h5 className="cur-chap">CURRENT CHAPTER</h5>
+        <h5 className="chap">Chapter 14</h5>
+        <button className="chap-but" type="button">
+          Update progress
+        </button>
+      </div>
     </div>
   );
 }
