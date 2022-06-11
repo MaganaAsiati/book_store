@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
 import { fetchBooks } from '../redux/books/books';
+import './Books.css';
 
 export default function Books() {
   const books = useSelector((state) => state.book);
@@ -17,11 +18,12 @@ export default function Books() {
       <ul className="book-list">
         {books?.map((book) => (
           <li key={book.id}>
-            <Book id={book.id} title={book.title} author={book.author} />
+            <Book id={book.id} title={book.title} author={book.author} category={book.category} />
           </li>
         ))}
       </ul>
       <Form />
+      <hr />
     </div>
   );
 }
