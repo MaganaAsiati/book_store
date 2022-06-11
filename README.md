@@ -1,4 +1,4 @@
-[live demo](https://gentle-pasca-44321c.netlify.app/)
+[live demo](https://cosmic-lolly-9a1ca7.netlify.app)
 
 # book_store
 
