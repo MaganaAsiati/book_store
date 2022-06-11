@@ -1,4 +1,3 @@
-/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteBook } from '../redux/books/books';
